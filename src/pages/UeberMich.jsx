@@ -1,7 +1,7 @@
 function UeberMich() {
   return (
     <main>
-        <h1>Über mich</h1>
+        <h1 className="text-3xl font-bold underline">Über mich</h1>
         <p>
             Ich bin ein:e Ex-Mathematikstudent:in aus Berlin. Mein besonderes Interesse gilt funktionalen
             Programmiersprachen, kategorischer Logik und der Semantik von Typentheorie. Wenn du dich auf meiner Webseite umschaust, 
