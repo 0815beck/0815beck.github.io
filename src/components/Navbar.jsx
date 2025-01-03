@@ -7,7 +7,7 @@ function Navbar() {
                 <li className="flex-auto">
                     <Link to="/" 
                     className="
-                    p-3 block text-center
+                    p-2 block text-center
                     border-solid
                     border-violet-300
                     border-b-2
@@ -15,12 +15,12 @@ function Navbar() {
                     hover:bg-violet-800
                     hover:text-white
                     font-bold">
-                        Über mich
+                        Home
                     </Link>
                 </li>
                 <li className="flex-auto">
                     <Link to="/texte" className="
-                    p-3 block text-center
+                    p-2 block text-center
                     border-solid
                     border-purple-300
                     border-b-2
@@ -31,7 +31,7 @@ function Navbar() {
                 </li>
                 <li className="flex-auto">
                     <Link to="/" className="
-                    p-3 block text-center 
+                    p-2 block text-center 
                     border-solid
                     border-fuchsia-300
                     border-b-2
@@ -42,7 +42,7 @@ function Navbar() {
                 </li>
                 <li className="flex-auto">
                     <Link to="/" className="
-                    p-3 block text-center
+                    p-2 block text-center
                     border-solid
                     border-pink-300
                     border-b-2
@@ -53,7 +53,7 @@ function Navbar() {
                 </li>
                 <li className="flex-auto">
                     <Link to="/" className="
-                    p-3 block text-center
+                    p-2 block text-center
                     border-solid
                     border-rose-300
                     border-b-2
