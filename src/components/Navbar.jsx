@@ -9,10 +9,10 @@ function Navbar() {
                     className="
                     p-2 block text-center
                     border-solid
-                    border-violet-300
+                    border-violet-400
                     border-b-2
-                    bg-violet-200
-                    hover:bg-violet-800
+                    bg-violet-300
+                    hover:bg-violet-700
                     hover:text-white
                     font-bold">
                         Home
@@ -22,43 +22,43 @@ function Navbar() {
                     <Link to="/texte" className="
                     p-2 block text-center
                     border-solid
-                    border-purple-300
+                    border-purple-400
                     border-b-2
-                    bg-purple-200
-                    hover:bg-purple-800
+                    bg-purple-300
+                    hover:bg-purple-700
                     hover:text-white
                     font-bold">Texte</Link>
                 </li>
                 <li className="flex-auto">
-                    <Link to="/" className="
+                    <Link to="/blog" className="
                     p-2 block text-center 
                     border-solid
-                    border-fuchsia-300
+                    border-fuchsia-400
                     border-b-2
-                    bg-fuchsia-200
-                    hover:bg-fuchsia-800
+                    bg-fuchsia-300
+                    hover:bg-fuchsia-700
                     hover:text-white
                     font-bold">Blog</Link>
                 </li>
                 <li className="flex-auto">
-                    <Link to="/" className="
+                    <Link to="/resume" className="
                     p-2 block text-center
                     border-solid
-                    border-pink-300
+                    border-pink-400
                     border-b-2
-                    bg-pink-200
-                    hover:bg-pink-800
+                    bg-pink-300
+                    hover:bg-pink-700
                     hover:text-white
                     font-bold">Resume</Link>
                 </li>
                 <li className="flex-auto">
-                    <Link to="/" className="
+                    <Link to="/kontakt" className="
                     p-2 block text-center
                     border-solid
-                    border-rose-300
+                    border-rose-400
                     border-b-2
-                    bg-rose-200
-                    hover:bg-rose-800
+                    bg-rose-300
+                    hover:bg-rose-700
                     hover:text-white
                     font-bold">Kontakt</Link>
                 </li>

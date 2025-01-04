@@ -1,17 +1,45 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
+import { useLocation } from 'react-router-dom'
 
 function MobileNavbar({isOpen, setIsOpen}) {
 
+    const location = useLocation()
+
+
+    // This is extremely annoying, but tailwind css scans the file
+    // for css classes, and I have to write some here in a comment to make sure
+    // they are added by tailwind css
+    // bg-violet-300 border-violet-400
+    // bg-purple-300 border-purple-400
+    // bg-fuchsia-300 border-fuchsia-400
+    // bg-pink-300 border-pink-400
+    // bg-rose-300 border-rose-400
+
+    const getColorFromPath = (pathname) => {
+        switch (pathname) {
+            case "/home":
+                return "violet"
+            case "/texte":
+                return "purple"
+            case "/blog":
+                return "fuchsia"
+            case "/resume":
+                return "pink"
+            case "/kontakt":
+                return "rose"
+        }
+    }
+
     return (
         <nav className="h-fit">
-            <p className="
+            <p className={`
             flex
-            bg-indigo-200 p-2 font-bold
-            border-solid border-b-2 border-indigo-300
-            hover:cursor-pointer"
+            bg-${getColorFromPath(location.pathname)}-300 p-2 font-bold
+            border-solid border-b-2 border-${getColorFromPath(location.pathname)}-400
+            hover:cursor-pointer`}
             onClick={() => setIsOpen(!isOpen)}>
-                <span className="flex-grow">Nicos Webseite</span>
+                <span className="flex-grow">{location.pathname == "/" ? "/home" : location.pathname} </span>
                 {isOpen ? 
                     <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6.22566 4.81096C5.83514 4.42044 5.20197 4.42044 4.81145 
@@ -29,14 +57,14 @@ function MobileNavbar({isOpen, setIsOpen}) {
             </p>
             {isOpen && <ul className="flex flex-col absolute z-10 w-full">
                 <li className="flex-auto">
-                    <Link to="/" 
+                    <Link to="/home" 
                     className="
                         p-2 block text-center
                         border-solid
                         border-violet-300
                         border-b-2
                         bg-violet-200
-                        hover:bg-violet-800
+                        hover:bg-violet-700
                         hover:text-white
                         font-bold"
                     onClick={() => {setIsOpen(!isOpen)}}>
@@ -50,43 +78,43 @@ function MobileNavbar({isOpen, setIsOpen}) {
                     border-purple-300
                     border-b-2
                     bg-purple-200
-                    hover:bg-purple-800
+                    hover:bg-purple-700
                     hover:text-white
                     font-bold"
                     onClick={() => {setIsOpen(!isOpen)}}>Texte</Link>
                 </li>
                 <li className="flex-auto">
-                    <Link to="/" className="
+                    <Link to="/blog" className="
                     p-2 block text-center 
                     border-solid
                     border-fuchsia-300
                     border-b-2
                     bg-fuchsia-200
-                    hover:bg-fuchsia-800
+                    hover:bg-fuchsia-700
                     hover:text-white
                     font-bold"
                     onClick={() => {setIsOpen(!isOpen)}}>Blog</Link>
                 </li>
                 <li className="flex-auto">
-                    <Link to="/" className="
+                    <Link to="/resume" className="
                     p-2 block text-center
                     border-solid
                     border-pink-300
                     border-b-2
                     bg-pink-200
-                    hover:bg-pink-800
+                    hover:bg-pink-700
                     hover:text-white
                     font-bold"
                     onClick={() => {setIsOpen(!isOpen)}}>Resume</Link>
                 </li>
                 <li className="flex-auto">
-                    <Link to="/" className="
+                    <Link to="/kontakt" className="
                     p-2 block text-center
                     border-solid
                     border-rose-300
                     border-b-2
                     bg-rose-200
-                    hover:bg-rose-800
+                    hover:bg-rose-700
                     hover:text-white
                     font-bold"
                     onClick={() => {setIsOpen(!isOpen)}}>Kontakt</Link>
