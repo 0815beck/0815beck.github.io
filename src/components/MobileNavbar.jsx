@@ -10,6 +10,7 @@ function MobileNavbar({isOpen, setIsOpen}) {
     // This is extremely annoying, but tailwind css scans the file
     // for css classes, and I have to write some here in a comment to make sure
     // they are added by tailwind css
+    // bg-indigo-300 vorder-indigo-400
     // bg-violet-300 border-violet-400
     // bg-purple-300 border-purple-400
     // bg-fuchsia-300 border-fuchsia-400
@@ -19,15 +20,15 @@ function MobileNavbar({isOpen, setIsOpen}) {
     const getColorFromPath = (pathname) => {
         switch (pathname) {
             case "/home":
-                return "violet"
+                return "indigo"
             case "/texte":
-                return "purple"
+                return "violet"
             case "/blog":
-                return "fuchsia"
+                return "purple"
             case "/resume":
-                return "pink"
+                return "fuchsia"
             case "/kontakt":
-                return "rose"
+                return "pink"
         }
     }
 
@@ -35,8 +36,8 @@ function MobileNavbar({isOpen, setIsOpen}) {
         <nav className="h-fit">
             <p className={`
             flex
-            bg-${getColorFromPath(location.pathname)}-300 p-2 font-bold
-            border-solid border-b-2 border-${getColorFromPath(location.pathname)}-400
+            bg-${getColorFromPath(location.pathname)}-200 p-2 font-bold
+            border-solid border-b-2 border-${getColorFromPath(location.pathname)}-300
             hover:cursor-pointer`}
             onClick={() => setIsOpen(!isOpen)}>
                 <span className="flex-grow">{location.pathname == "/" ? "/home" : location.pathname} </span>
@@ -61,10 +62,10 @@ function MobileNavbar({isOpen, setIsOpen}) {
                     className="
                         p-2 block text-center
                         border-solid
-                        border-violet-300
+                        border-indigo-300
                         border-b-2
-                        bg-violet-200
-                        hover:bg-violet-700
+                        bg-indigo-200
+                        hover:bg-indigo-700
                         hover:text-white
                         font-bold"
                     onClick={() => {setIsOpen(!isOpen)}}>
@@ -75,10 +76,10 @@ function MobileNavbar({isOpen, setIsOpen}) {
                     <Link to="/texte" className="
                     p-2 block text-center
                     border-solid
-                    border-purple-300
+                    border-violet-300
                     border-b-2
-                    bg-purple-200
-                    hover:bg-purple-700
+                    bg-violet-200
+                    hover:bg-violet-700
                     hover:text-white
                     font-bold"
                     onClick={() => {setIsOpen(!isOpen)}}>Texte</Link>
@@ -87,10 +88,10 @@ function MobileNavbar({isOpen, setIsOpen}) {
                     <Link to="/blog" className="
                     p-2 block text-center 
                     border-solid
-                    border-fuchsia-300
+                    border-purple-300
                     border-b-2
-                    bg-fuchsia-200
-                    hover:bg-fuchsia-700
+                    bg-purple-200
+                    hover:bg-purple-700
                     hover:text-white
                     font-bold"
                     onClick={() => {setIsOpen(!isOpen)}}>Blog</Link>
@@ -99,10 +100,10 @@ function MobileNavbar({isOpen, setIsOpen}) {
                     <Link to="/resume" className="
                     p-2 block text-center
                     border-solid
-                    border-pink-300
+                    border-fuchsia-200
                     border-b-2
-                    bg-pink-200
-                    hover:bg-pink-700
+                    bg-fuchsia-200
+                    hover:bg-fuchsia-700
                     hover:text-white
                     font-bold"
                     onClick={() => {setIsOpen(!isOpen)}}>Resume</Link>
@@ -111,10 +112,10 @@ function MobileNavbar({isOpen, setIsOpen}) {
                     <Link to="/kontakt" className="
                     p-2 block text-center
                     border-solid
-                    border-rose-300
+                    border-pink-300
                     border-b-2
-                    bg-rose-200
-                    hover:bg-rose-700
+                    bg-pink-200
+                    hover:bg-pink-700
                     hover:text-white
                     font-bold"
                     onClick={() => {setIsOpen(!isOpen)}}>Kontakt</Link>
