@@ -17,7 +17,7 @@ function MobileNavbar({ isOpen, setIsOpen }) {
 
   const getColorFromPath = (pathname) => {
     switch (pathname) {
-      case "/home":
+      case "/":
         return "indigo";
       case "/texte":
         return "violet";
