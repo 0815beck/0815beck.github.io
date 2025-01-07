@@ -83,7 +83,7 @@ function MobileNavbar({ isOpen, setIsOpen }) {
           <li className="flex-auto">
             <Link
               to="/texte"
-              className="block border-b-2 border-solid border-violet-300 bg-violet-200 p-2 text-center font-bold hover:bg-violet-700 hover:text-white"
+              className="block border-b-2 border-violet-300 bg-violet-200 p-2 text-center font-bold hover:bg-violet-700 hover:text-white"
               onClick={() => {
                 setIsOpen(!isOpen);
               }}
